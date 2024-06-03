@@ -1,0 +1,50 @@
+body {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    font-family: "Arial", sans-serif;
+}
+.btn:hover {
+    background-color: #324ebd;
+    color: white;
+}
+img {
+    width: 100%;
+}
+.container {
+    height: 100%;
+    margin-top: 3.5%;
+}
+.lantai {
+    place-items: center;
+}
+.col {
+    border: 2px solid #ffffff;
+    background-color: rgb(44, 44, 44);
+    color: #ffffff;
+    height: 6.5em;
+    padding: 2.3em;
+    transition: background-color 0.3s, color 0.3s;
+}
+.col:hover {
+    background-color: rgb(74, 69, 69);
+    color: #ffcc00;
+}
+.card {
+    background-color: #132e35;
+}
+.card-hasil {
+    background-color: #0d1f23;
+    color: #afb3b7;
+}
+.card-header {
+    font-size: larger;
+}
+.container-dosen {
+    margin-top: 1%;
+}
+.container-score {
+    margin-top: 10%;
+}
+.container-edit {
+    margin-top: 1%;
+}

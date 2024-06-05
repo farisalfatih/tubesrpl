@@ -6,59 +6,6 @@
   <title>{!! $floor->title !!}</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="{{ asset('css/floor.css') }}">
-  <style>
-    /* Gaya khusus untuk layar yang lebih kecil dari 1087px */
-    @media only screen and (max-width: 1087px) {
-      body {
-        min-width: 634px;
-      }
-      
-      .navbar-brand, .col-sm-4 {
-        display: none;
-      }
-      .code {
-        width: 100%; /* Set lebar konten menjadi 100% */
-        }
-
-      .row[class^="row"] {
-          display: flex;
-          flex-wrap: wrap;
-          margin: 0px;
-          margin-right: 1%;
-          width: 98%;
-      }
-
-      .col-sm-8[class^="col-"] {
-          flex: 0 0 100%;
-          max-width: 100%;
-          margin: 1%;
-          margin-right: 3%;
-          z-index: 0;
-      }
-      .navbar{
-        width: 100%;
-        position: sticky;
-        top: 0px;
-        z-index: 1;
-
-      }
-    }
-
-    @media only screen and (max-width: 654px) {
-      input, selec, option{
-        width: 150px;
-      }
-    }
-    
-
-    /* Gaya khusus untuk layar yang lebih besar dari 1087px */
-    @media only screen and (min-width: 1087px) {
-      .collapse, .navbar-toggler {
-        display: none;
-      }
-      
-    }
-  </style>
 </head>
 <body>
 
@@ -76,6 +23,7 @@
 <div class="collapse" id="navbarToggleExternalContent">
   <div class="bg-dark p-4">
     <a href="/" class="text-body-emphasis h4">{!! $floor->judul_lantai !!}</a>
+    <br>
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Lihat Quest</button>
   </div>
 </div>

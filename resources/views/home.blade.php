@@ -6,85 +6,11 @@
     <title>Dungeon of HTML</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ asset('css/menu.css') }}">
-    <style>
-        body {
-            background-color: #121212;
-            color: #e0e0e0;
-        }
-        .navbar {
-            margin-bottom: 30px;
-        }
-        .host {
-            width: 100%;
-            max-width: 300px;
-            display: block;
-        }
-        .card-custom {
-            background-color: #1e1e1e;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            padding: 20px;
-            width: 100%;
-            max-width: 800px;
-            margin: auto;
-        }
-        .list-group-item {
-            background-color: #2c2c2c;
-            color: #e0e0e0;
-        }
-        .list-group-item-action:hover {
-            background-color: #383838;
-        }
-        .footer {
-            background-color: #343a40;
-            color: #e0e0e0;
-            padding: 10px 0;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        .lantai {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-        }
-        .lantai .content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .image-and-list {
-            display: flex;
-            align-items: center;
-            margin-top: 20px;
-            flex-wrap: wrap;
-        }
-        .list {
-            margin-left: 20px;
-            margin-top: 20px;
-        }
-
-        @media (max-width: 768px) {
-            .lantai {
-                flex-direction: column;
-            }
-            .image-and-list {
-                flex-direction: column;
-                align-items: center;
-            }
-            .list {
-                margin-left: 0;
-                margin-top: 20px;
-            }
-        }
-    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand mr-4" href="/">Dungeon of HTML</a>
+            <a class="navbar-brand mr-4" href="/dosen-dashboard">Dungeon of HTML</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -100,7 +26,10 @@
                         </a>
                         <div class="dropdown-menu dropdown-menu-right bg-dark" aria-labelledby="navbarDropdown">
                             @auth
-                                <a class="dropdown-item font-weight-bold text-danger" href="/logout">Log Out</a>
+                                <form action="/logout" method="post" class="dropdown-item">
+                                    @csrf
+                                    <button type="submit" class="btn btn-link text-danger" >Log Out</button>
+                                </form>
                             @else
                                 <a class="dropdown-item text-success font-weight-bold" href="/login">Log In</a>
                             @endauth

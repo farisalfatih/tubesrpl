@@ -43,7 +43,3 @@ Route::get('/score', function () {
 });
 
 Route::get('/dosen-dashboard', [AdminDashboardController::class, 'index'])->name('admin.dashboard');
-
-Route::get('/edit', function () {
-    return view('edit');
-});

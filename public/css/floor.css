@@ -2,12 +2,14 @@ body {
     background-color: #1a1a1a;
     color: #ffffff;
     font-family: "Arial", sans-serif;
+    font-size: 1em;
 }
 .code {
     padding: 2%;
     background-color: #333333;
     border: 2px solid #555555;
     border-radius: 10px;
+    margin-bottom: 1%;
 }
 .code p {
     margin-bottom: 10px;
@@ -51,7 +53,7 @@ body {
 .card {
     background: #333333;
     position: sticky;
-    top: 5px;
+    top: 74px;
     margin: 5px;
 }
 img {
@@ -59,13 +61,14 @@ img {
 }
 .row {
     width: 100%;
+    margin-top: 1%;
 }
 .alert-custom {
     background-color: #20232a;
     color: #61dafb;
     border: 1px solid #61dafb;
     position: fixed;
-    top: 20px;
+    top: 74px;
     right: 20px;
     z-index: 1050;
     width: 300px;
@@ -80,4 +83,21 @@ img {
     color: #61dafb;
     font-size: 1.2rem;
     cursor: pointer;
+}
+.navbar {
+    width: 100%;
+    position: sticky;
+    top: 0px;
+    z-index: 1;
+}
+input,
+select,
+option {
+    width: 20%;
+}
+.navbar {
+    background-color: #343a40;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }

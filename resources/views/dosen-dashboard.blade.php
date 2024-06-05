@@ -13,7 +13,7 @@
                 <p class="navbar-brand" >Dungeon of HTML</p>
                 <div class="d-flex">
                     @auth
-                        <a href="{{ route('edit', auth()->user()) }}" class="btn btn-sm btn-outline-secondary link-light">{{ auth()->user()->name }}</a>
+                        <p class="fst-italic">{{ auth()->user()->username }}</p>
                         <form action="/logout" method="post" class="ml-2">
                             @csrf
                             <button type="submit" class="btn btn-danger btn-sm">Log Out</button>
@@ -51,6 +51,13 @@
               </tbody>
           </table>
         </div>
+
+
+        <footer class="footer">
+      <div class="container">
+          <span>Info Gresik &copy; 2024</span>
+      </div>
+    </footer>
 
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>

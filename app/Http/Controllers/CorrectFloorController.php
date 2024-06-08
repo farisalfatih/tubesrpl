@@ -286,8 +286,17 @@ class CorrectFloorController extends Controller
 
         foreach ($correctAnswers as $key => $correctAnswer) {
             // Memeriksa jawaban dari form
-            if (strtolower($request->input($key)) == strtolower($correctAnswer)) {
-                $correctCount++;
+            $userAnswer = strtolower($request->input($key));
+            
+            // Memeriksa jika jawaban yang benar merupakan salah satu kemungkinan
+            if (is_array($correctAnswer)) {
+                if (in_array(strtolower($userAnswer), array_map('strtolower', $correctAnswer))) {
+                    $correctCount++;
+                }
+            } else {
+                if (strtolower($userAnswer) == strtolower($correctAnswer)) {
+                    $correctCount++;
+                }
             }
         }
 
